@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <aside class="sidebar">
-            <div>
+            <div class="dashboard">
                 <img src="./resources/logos/view-dashboard.svg" alt="" height="20px" width="20px">
                 <span>Dashboard</span>
             </div>
@@ -55,23 +55,25 @@
                 </div>
             </div>
         </aside>
-        <div class="navbar">
-           <div>
-                <img src="./resources/logos/magnify.svg" alt="search" height="10px" width="10px">
-                <input type="text">
-                <img src="./resources/logos/bell-ring.svg" alt="image" height="10px" width="10px">
-                <img src="" alt="profile pic">
-                <span>Keshar Narayan Shrestha</span>
-           </div>
-           <div>
-                <img src="" alt="profile pic">
-                <span>hi there,Keshar Narayan Shrestha(@KNS)
-                </span>
-                <button>New</button>
-                <button>Upload</button>
-                <button>Share</button>
-           </div>
-        </div>
+        <header>
+            <div class="search-container">
+                <button class="search-btn"><img src="./resources/logos/view-dashboard.svg"></button>
+                <input type="search" name="" id="" class="searchbar" />
+            </div>
+            <button class="bell"><img src="./resources/logos/bell-ring.svg" alt="" /></button>
+            <button class="profile"><img src="./resources/logos/profile-small.svg" alt="" /></button>
+            <div class="user-name">Keshar Shrestha</div>
+            <div class="greeting">
+                <img src="assets/profile-big.svg" alt="" />
+                <div class="text">
+                    Hi there,<br />
+                    Keshar Shrestha(@KNS)
+                </div>
+            </div>
+            <button class="new">new</button>
+            <button class="upload">upload</button>
+            <button class="share">share</button>
+        </header>
         
         <div class="project-container">
 

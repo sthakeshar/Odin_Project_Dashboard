@@ -10,7 +10,7 @@ body {
 .container{
     display: grid;
     grid-template-columns: 220px 1fr;   /* sidebar | main */
-    grid-template-rows: 60px 1fr;       /* navbar | content */
+    grid-template-rows: 150px 1fr;       /* navbar | content */
     height: 100vh;
 }
 .sidebar {
@@ -22,13 +22,110 @@ body {
 .navbar {
   background-color: #34495e;
   color: white;
-  padding: 16px;
+  padding: 20px;
+  gap: 20px;
 }
 
 .action,.security{
     display: flex;
     flex-direction:column;
     gap: 10px; 
+}
+
+.navbar-uppper,.navbar-lower{
+  display: flex;
+  gap: 20px;
+}
+header {
+  background: white;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  grid-template-columns: 7fr 1fr 1fr 1fr;
+}
+header :nth-child(n + 5) {
+  grid-row-start: 2;
+}
+button {
+  border: none;
+  background: white;
+}
+
+input.searchbar {
+  border: none;
+  background: rgb(82, 82, 82, 0.1);
+  border-radius: 15px;
+  padding: 10px;
+  font-size: 20px;
+  height: 28px;
+  flex-grow: 1;
+  justify-self: start;
+  align-self: center;
+}
+div.search {
+  grid-area: 1/1/2/2;
+  grid-auto-flow: column;
+  align-self: center;
+  padding-left: 20px;
+  gap: 5px;
+  display: flex;
+  flex-grow: 1;
+}
+button.search {
+  justify-self: end;
+}
+.bell {
+  justify-self: end;
+}
+.profile {
+  justify-self: center;
+}
+.user-name {
+  display: flex;
+  justify-self: start;
+  align-self: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+.greeting {
+  display: grid;
+  grid-auto-flow: column;
+  justify-self: start;
+  align-self: center;
+  gap: 10px;
+  padding: 20px;
+}
+.greeting .text {
+  display: flex;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 30px;
+}
+.greeting .text:first-line {
+  font-size: 14px;
+}
+button.new,
+button.upload,
+button.share {
+  background: #15acf1;
+  height: 50px;
+  width: 100px;
+  border-radius: 25px;
+  color: white;
+  text-transform: capitalize;
+  font-weight: bold;
+  align-self: center;
+}
+button.new {
+  justify-self: end;
+}
+button.upload {
+  justify-self: center;
+}
+button.share {
+  justify-self: start;
+}
+.search-btn img {
+  pointer-events: none;
 }
 .project-container {
   padding: 20px;
