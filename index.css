@@ -147,6 +147,11 @@ button.share {
   height: 20px;
   filter: invert(0); /* or invert(1) depending on SVG */
 }
+button >img{
+  width: 20px;
+  height: 20px;
+  filter: invert(0);
+}
 .dashboard {
   display: grid;
   grid-auto-flow: column;
@@ -156,7 +161,93 @@ button.share {
   gap: 10px;
   padding-left: 5px;
 }
+main {
+  background-color: #efeff5;
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.8fr;
+  grid-template-rows: 1fr 1fr ;
+  gap: 20px;
+  padding: 40px 25px;
+}
 .project-container {
+  grid-area: 1/1/3/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+}
+.project-container article {
+  flex: 1;
+  background-color: #efeff5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 0;
+  padding-bottom: 0;
+  gap: 20px;
+}
+.project-container .project {
   padding: 20px;
-  background-color: #ecf0f1;
+  background: white;
+  border-left: 10px solid orange;
+  border-radius: 10px;
+  display:grid
+}
+.project-container .head {
+  padding-left: 20px;
+}
+.project > div:last-of-type {
+  display: grid;
+  grid-auto-flow: column;
+  place-content: end;
+  gap: 10px;
+}
+.project > div:first-line {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 30px;
+}
+.announcement {
+  grid-column: 3;
+  display: flex;
+  flex-direction: column;
+}
+article {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  flex-grow: 1;
+}
+.head {
+  font-size: 24px;
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.announcement > article > div {
+  border-bottom: 1px solid grey;
+  padding: 20px;
+}
+.announcement > article > div:first-line {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.trending {
+  grid-area: 2/3;
+  display: flex;
+  flex-direction: column;
+}
+.trending article {
+  display: flex;
+  flex-direction: column;
+}
+.trending article > div {
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  line-height: 25px;
+  gap: 20px;
+  font-size: 18px;
+  padding-bottom: 20px;
+  flex: 1;
 }
